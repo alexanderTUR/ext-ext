@@ -62,29 +62,38 @@
   left: 0;
   top: -40px;
   width: 220px;
-  height: 390%;
+  //height: 390%;
+  height: 1660px;
   z-index: 1;
   background-size: 100% 100%;
   pointer-events: none;
   @include media('>=phoneSmall') {
-    height: 440%;
+    height: 1780px;
+  }
+  @include media('>=phoneReg') {
+    height: 1400px;
   }
   @include media('>=tabletSmall') {
-    top: 50px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-196px);
     background-image: url('../img/ants_vert_dt.png');
   }
   @include media('>=tabletReg') {
-    width: 340px;
-    top: -25px;
-    left: 34%;
+    //width: 340px;
+    top: 30px;
+    //left: 33.5%;
+    height: 1580px;
+  }
+  @include media('>=desktopSmall') {
+    top: 0;
   }
   @include media('>=desktopReg') {
-    top: 122px;
-    left: 29%;
-    width: 344px;
+    top: 120px;
+    height: 1630px;
   }
   @include media('>=desktopLarge') {
-    left: 34.5%;
+    //left: 34.5%;
   }
 }
 
@@ -112,6 +121,9 @@
     font-size: 30px;
   }
   @include media('>=tabletReg') {
+    min-width: 400px;
+  }
+  @include media('>=desktopMid') {
     max-width: 450px;
     font-size: 36px;
   }
@@ -197,6 +209,8 @@
   text-align: right;
   color: $color-go-ben;
   margin: 0 0 24px;
+  position: relative;
+  z-index: 1;
   @include media('>=tabletReg') {
     //max-width: 450px;
     font-size: 36px;
@@ -209,6 +223,8 @@
   max-width: 172px;
   width: 100%;
   margin-left: auto;
+  position: relative;
+  z-index: 1;
   @include media('>=phoneSmall') {
     margin-top: -50px;
     margin-right: auto;
@@ -337,22 +353,17 @@
   @include media('>=phoneReg') {
     background-position: 68% 0;
   }
-  //@include media('>=tabletSmall') {
-  //  background-position: 55% 8px;
-  //  background-size: 270% 120%;
-  //}
   @include media('>=tabletSmall') {
     height: 270px;
-    top: -250px;
-    background-position: 43% 8px;
-    background-size: 135% 110%;
+    top: -270px;
+    background-position: 0 70px;
+    background-size: 100% 100%;
   }
   @include media('>=desktopSmall') {
-    background-position: 28% 8px;
+    background-position: 0 30px;
   }
   @include media('>=desktopReg') {
-    background-position: 0 40px;
-    background-size: 101% 99%;
+    background-position: 0 60px;
   }
 }
 

@@ -102,30 +102,39 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // simple function to use for callback in the intersection observer
   const changeNav = (entries, observer) => {
     entries.forEach((entry) => {
-      console.log('entry', entry);
+      // console.log('entry', entry);
       // verify the element is intersecting
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+      if (entry.isIntersecting && entry.intersectionRatio) {
         // remove old active class
         document.querySelector('.current').classList.remove('current');
         // get id of the intersecting section
-        var id = entry.target.getAttribute('id');
+        const id = entry.target.getAttribute('id');
         // find matching link & add appropriate class
-        var newLink = document.querySelector(`[href="#${id}"]`).classList.add('current');
+        const newLink = document.querySelector(`[href="#${id}"]`).classList.add('current');
       }
     });
   };
 
+  const calcThreshold = () => {
+    if (window.innerWidth > 1280) {
+      return 0.4;
+    } else if (window.innerWidth >= 1024 && window.innerWidth <= 1280) {
+      return 0.3;
+    } else return 0.1;
+  };
   // init the observer
   const options = {
-    threshold: 0.55,
+    threshold: calcThreshold(),
   };
+
+  console.log(options);
 
   const observer = new IntersectionObserver(changeNav, options);
 
   // target the elements to be observed
   const sections = document.querySelectorAll('.jsMenuTarget');
   sections.forEach((section) => {
-    console.log('section', section);
+    // console.log('section', section);
     observer.observe(section);
   });
 

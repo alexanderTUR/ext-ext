@@ -1,0 +1,38 @@
+// Colors variables
+$color-white: #fff;
+$color-satin-linen: #e6e4d2;
+$color-foggy-gray: #cfcebd;
+$color-granite-green: #918f80;
+$color-black: #000;
+$color-cod-gray: #1a1a1a;
+$color-mine-shaft: #333;
+$color-go-ben: #6d6a46;
+$color-turbo: #ffe500;
+$color-green: #11d200;
+
+$color-default-text: $color-mine-shaft;
+$color-default-bg: $color-foggy-gray;
+$color-dark-bg: $color-go-ben;
+$color-btn-bg: $color-mine-shaft;
+//$color-light-bg: $color-foggy-gray;
+
+// Base font size
+$base-font-size: 16px !default;
+
+// Breakpoints for include-media mixins
+$breakpoints: (
+  phoneSmall: 375px,
+  phoneReg: 414px,
+  tabletSmall: 768px,
+  tabletMid: 800px,
+  tabletReg: 1024px,
+  desktopSmall: 1280px,
+  desktopMid: 1366px,
+  desktopReg: 1440px,
+  desktopBig: 1600px,
+  desktopLarge: 1920px,
+);
+
+$height-header-mobile: 80px;
+
+$z-top: 100;

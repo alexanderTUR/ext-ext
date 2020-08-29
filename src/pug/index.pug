@@ -1,0 +1,471 @@
+---
+title: Extreme Exterminating
+bodyClass: template-main
+---
+extends layouts/_main-layout
+
+block content
+
+  //Hero section bgn
+  section.hero.jsMenuTarget#hero
+    .hero__mens-block
+      .hero__bottom-bg-container
+      .hero__mens-block-container.section-container
+        .hero__intro-text
+          h1.hero__top-heading Extreme Exterminating —
+          .hero__sub-heading
+            p Your individual package of professional pest control measures
+        .hero__mens-image
+          img.hero__mens-image_mens(srcset="img/mens-bg.png, img/mens-bg@2x.png 2x" src="img/mens-bg.png" alt="Extreme Exterminating Mens." loading="lazy" width="575" height="656")
+          img.hero__mens-image_hand(srcset="img/mens-up.png, img/mens-up@2x.png 2x" src="img/mens-up.png" alt="Extreme Exterminating Men hand." loading="lazy" width="161" height="226")
+    .hero__bottom-block
+      .hero__vertical-ants-container
+      .hero__bottom-block-container.section-container
+        .hero__cta-btn
+          button.btn(data-micromodal-trigger="modal-1") contact now
+        .hero__quality
+          h2.hero__quality-heading We provide fast, high-quality and affordable service.
+          .hero__quality-image
+            img(src="img/best-quality.svg" alt="Provide best quality stamp.")
+  //Hero section bgn
+
+  //Advantages section bgn
+  section.advantages.jsMenuTarget#advantages
+    .advantages__container.section-container
+      h2.advantages__heading Our advantages
+      ul.advantages__list
+        li.advantages__item
+          .advantage-card
+            .advantage-card__star-image
+              img(src="img/icon-star.svg" alt="Star icon.")
+            .advantage-card__text
+              p We use all the top products, methods and equipment
+        li.advantages__item
+          .advantage-card
+            .advantage-card__star-image
+              img(src="img/icon-star.svg" alt="Star icon.")
+            .advantage-card__text
+              p We at extreme exterminating constantly keep up to date with new methods, procedures and all pest control matters
+        li.advantages__item
+          .advantage-card
+            .advantage-card__star-image
+              img(src="img/icon-star.svg" alt="Star icon.")
+            .advantage-card__text
+              p Our team of pest control professionals is fully licensed and insured
+  //Advantages section end
+
+  //Services section bgn
+  section.services.jsMenuTarget#services
+    .services__home-wave-bg
+    .services__container.section-container
+      .services__intro
+        h2.services__heading Services
+        .services__sub-heading
+          p
+            b We here at extreme exterminating are highly qualified at eliminating and managing your pest issues of:
+      ul.services__main-list
+        li.services__main-item
+          .pest
+            .pest__image
+              img(srcset="img/bed-bugs.png, img/bed-bugs@2x.png 2x" src="img/bed-bugs.png" alt="Bed bugs." loading="lazy" width="168" height="168")
+            .pest__title
+              span Bed bugs
+        li.services__main-item
+          .pest
+            .pest__image
+              img(srcset="img/cockroaches.png, img/cockroaches@2x.png 2x" src="img/cockroaches.png" alt="Cockroaches." loading="lazy" width="168" height="168")
+            .pest__title
+              span Cockroaches
+        li.services__main-item
+          .pest
+            .pest__image
+              img(srcset="img/ants.png, img/ants@2x.png 2x" src="img/ants.png" alt="Ants." loading="lazy" width="168" height="168")
+            .pest__title
+              span Ants
+        li.services__main-item
+          .pest
+            .pest__image
+              img(srcset="img/rodents.png, img/rodents@2x.png 2x" src="img/rodents.png" alt="Rodents." loading="lazy" width="168" height="168")
+            .pest__title
+              span Rodents
+      .services__text
+        p
+          b Other pests such as
+      ul.services__others-list
+        li.services__others-item
+          .pest
+            .pest__image
+              img(srcset="img/beetles.png, img/beetles@2x.png 2x" src="img/beetles.png" alt="Beetles." loading="lazy" width="134" height="134")
+            .pest__title
+              span beetles
+        li.services__others-item
+          .pest
+            .pest__image
+              img(srcset="img/mosquitoes.png, img/mosquitoes@2x.png 2x" src="img/mosquitoes.png" alt="Mosquitoes." loading="lazy" width="134" height="134")
+            .pest__title
+              span mosquitoes
+        li.services__others-item
+          .pest
+            .pest__image
+              img(srcset="img/fleas.png, img/fleas@2x.png 2x" src="img/fleas.png" alt="Fleas." loading="lazy" width="134" height="134")
+            .pest__title
+              span fleas
+        li.services__others-item
+          .pest
+            .pest__image
+              img(srcset="img/spiders.png, img/spiders@2x.png 2x" src="img/spiders.png" alt="Spiders." loading="lazy" width="134" height="134")
+            .pest__title
+              span spiders
+        li.services__others-item
+          .pest
+            .pest__image
+              img(srcset="img/moths.png, img/moths@2x.png 2x" src="img/moths.png" alt="Moths." loading="lazy" width="134" height="134")
+            .pest__title
+              span moths
+      .services__text
+        p
+          b We work with private, commercial, industrial, medical, day cares, nurseries, supermarkets, churches, schools, restraints and etc.
+  //Services section end
+
+  //Controls section bgn
+  section.controls.jsMenuTarget#controls
+    .controls__container.section-container
+      .controls__tabs.tabs
+
+        //Tabs controls bgn
+        ul.tabs__switchers-list
+          li.tabs__switchers-item
+            button.tabs__switchers-button.tabs__switchers-button_active(type="button" data-switch-tab="tab-bed-bug") Bed bug
+          li.tabs__switchers-item
+            button.tabs__switchers-button(type="button" data-switch-tab="tab-cockroach") Cockroach
+          li.tabs__switchers-item
+            button.tabs__switchers-button(type="button" data-switch-tab="tab-ant") Ant
+          li.tabs__switchers-item
+            button.tabs__switchers-button(type="button" data-switch-tab="tab-rodent") Rodent
+        //Tabs controls end
+
+        .tabs__content
+          //Tabs content bgn
+          //Bed Bug tab bgn
+          .tabs__tab.tabs__tab_active(data-tab="tab-bed-bug")
+            .tabs__intro
+              .tabs__intro-text
+                h2.tabs__top-heading Bed Bug Control
+                p
+                  b Detecting bed bugs is a tricky procedure. Eradicating bed bugs is a team effort.This is why it's important to have proffessional help
+                h4 Why do bed bugs intrude into people’s homes?
+                p
+                  b They are attracted by our Carbon dioxide we breathe out, and need blood to survive.
+                p
+                  b As you know bed bugs can spread quickly  if not treated in a timely manner.
+                p
+                  b Bed bugs nest and lay their eggs in the crevices of not only in your bed, mattress or box spring, but can also nest in furniture, doors, door handles, baseboards, wood floors, rugs, fabric and etc.
+                h4 What do we offer?
+                p
+                  b Here is the list of the Extreme Exterminating services:
+              .tabs__intro-image
+                .tabs__image
+                  img(srcset="img/bed-bugs_big.png, img/bed-bugs_big@2x.png 2x" src="img/bed-bugs_big.png" alt="Bed bugs." loading="lazy" width="324" height="324")
+            .tabs__columns.tabs__accent
+              .tabs__column
+                h3 Inspection
+                p
+                  b If you are not 100% sure if bed bugs occupying your home, Extreme Exterminating experts will come and identify whether your property needs treatment.
+                p
+                  b The inspection cost is included in the overall service price.
+              .tabs__column
+                h3.tabs__accent-heading Treatment
+                p
+                  b Upon  inspection, if any evidence of bed bugs found, we will use top products and methods of treatment to eliminate your pest issue effectively.
+            .tabs__columns.tabs__accent
+              .tabs__column
+                h3.tabs__accent-heading Bed bugs in the walls
+                p
+                  b In some cases, the scale of the disaster is too large. So, we have to open or take away floor moldings to remove bed bugs from hard to reach places.
+              .tabs__column
+                h3.tabs__accent-heading Steam Treatment
+                p
+                  b This is a safe and effective method for the treatment of mattresses, couches, child cribs, armchairs, and other pieces of furniture. This method is the final measure to ensure that bed bugs won’t come to your home anymore.
+            .tabs__columns
+              .tabs__column
+                h4 It seems I have bed bugs at home…
+                p
+                  b Have you started noticing red dots on your body after sleeping, black dots on the bed or somewhere else (this may be bed bug excretions), or live bed bugs?
+                p
+                  b Call us right away and we will exterminate these unpleasant intruders quickly and professionally!
+              .tabs__column
+                .tabs__cta-btn
+                  button.btn(data-micromodal-trigger="modal-1") contact now
+          //Bed Bug tab end
+
+          //Cockroach tab bgn
+          .tabs__tab(data-tab="tab-cockroach")
+            .tabs__intro
+              .tabs__intro-text
+                h2.tabs__top-heading Cockroach Control
+                p
+                  b These small brown insects have been bothering humans for ages. There are many species of cockroaches. Two  most common ones in the US are German cockroaches and American cockroaches, otherwise known as waterbugs. They are known for their survival skills., therefore, professional treatment needed.
+                h4 Why do cockroaches feel so comfortable in human property?
+                p
+                  b Insects invade property in search of food, water and shelter. Should you have this issue, you might have noticed them in kitchen areas, bathrooms and other areas of your property. Besides feeling comfortable living in your property cockroaches can cause health issues; thus, it's vital to get rid of them
+              .tabs__intro-image
+                .tabs__image
+                  img(srcset="img/cockroaches_big.png, img/cockroaches_big@2x.png 2x" src="img/cockroaches_big.png" alt="Cockroaches." loading="lazy" width="324" height="324")
+            .tabs__columns.tabs__accent
+              .tabs__column
+                h3 Inspection
+                p
+                  b In most cases, property owners are well aware of cockroaches conquering their property. So, the purpose of the inspection is to assess the property to eradicate the issue.
+                p
+                  b The inspection cost is included in the overall service price.
+              .tabs__column
+                h3.tabs__accent-heading Treatment
+                p
+                  b To exterminate cockroaches, once again we use top products and methods. Cockroach treatment is different from other treatments. In most cases property owners don't have to vacate their property.
+                p
+                  b We at Extreme Exterminating us gel bait, vacuuming and perimeter spray of areas where cockroaches were located
+            .tabs__columns
+              .tabs__column
+                h4 It seems I have cockroaches at home…
+                p
+                  b If you have noticed pests in your house or apartment, call us immediately and we will exterminate them as soon as possible. Also, if you have used some DIY methods before addressing us, please, tell us about them. We need this to work out the best strategy for exterminating intruders.
+              .tabs__column
+                .tabs__cta-btn
+                  button.btn(data-micromodal-trigger="modal-1") contact now
+          //Cockroach tab end
+
+          //Ant tab bgn
+          .tabs__tab(data-tab="tab-ant")
+            .tabs__intro
+              .tabs__intro-text
+                h2.tabs__top-heading Ant Control
+                p
+                  b Ants are considered the most harmless insects of all that live “next door” to humans. Only certain species can cause serious damage to wooden coatings: windows, walls and furniture.
+                h4 Why do ants come to our homes?
+                p
+                  b Like any other species of pests, ants come to human properties searching for food and shelter.
+                h4 What is the treatment like?
+                p
+                  b Ants may be serious intruders as their population sometimes grows, so large that they reach every room of your property.As you know it's hard to get rid of ants because queen produces more and more ants. Our goal at extreme exterminating is to eradicate a queen. Our method involves gel baiting and nest removal.
+              .tabs__intro-image
+                .tabs__image
+                  img(srcset="img/ant_big.png, img/ant_big@2x.png 2x" src="img/ant_big.png" alt="Ant." loading="lazy" width="324" height="324")
+            .tabs__columns.tabs__accent
+              .tabs__column
+                h3 Inspection
+                p
+                  b Extreme Exterminating specialists will come to your location and assess the problem. This includes our professional assessment to determine what type of ant species invaded your property.
+                p
+                  b The inspection cost is included in the overall service price.
+              .tabs__column
+                h3.tabs__accent-heading Treatment
+                p
+                  b We here at Extreme Exterminating conduct a high-quality treatment of your property.
+                p
+                  b In general, the measures are common for getting rid of all types ant species:
+                p
+                  b • For the particular treatment process, recommendations would be given upon inspection for treatment.
+                p
+                  b • All in all, the pesticides and procedures are safe for humans,pets and property.
+                p
+                  b • Treatment price will be given upon inspection based on our findings.
+            .tabs__columns
+              .tabs__column
+                h4 It seems I have ants at home…
+                p
+                  b Should you see ants invading your property, please don’t hesitate to call Extreme Exterminating for help. Struggling with ants on your own can be a challenge.
+              .tabs__column
+                .tabs__cta-btn
+                  button.btn(data-micromodal-trigger="modal-1") contact now
+          //Ant tab end
+
+          //Rodent tab bgn
+          .tabs__tab(data-tab="tab-rodent")
+            .tabs__intro
+              .tabs__intro-text
+                h2.tabs__top-heading Rodent Control
+                p
+                  b Rats and mice are widely spread in our everyday life. They settle in our homes and properties, causing considerable health and property damage, gnawing wiring, destroying food, and causing harm to various products.
+                h4 Reasons for rodents invading our homes and property
+                p
+                  b Rodents need food, water and shelter. Human activity products and stocks are becoming the main treats for rats and mice.
+                h4 How do we get rid of rodents?
+                p
+                  b We at extreme exterminating use several methods of professional rodent control:
+                p
+                  b 1. Baiting.
+                p
+                  b 2. We treat burrows with special tracking powder.
+                p
+                  b 3.Technician at  Extreme exterminating will rodent proof your property.
+              .tabs__intro-image
+                .tabs__image
+                  img(srcset="img/rodent_big.png, img/rodent_big@2x.png 2x" src="img/rodent_big.png" alt="Rodent." loading="lazy" width="324" height="324")
+            .tabs__columns.tabs__accent
+              .tabs__column
+                h3 Inspection
+                p
+                  b A specialist of Extreme Exterminating will inspect property for rodent activity and will  seek  points of entry.
+                p
+                  b • The inspection cost is included in the overall service price.
+              .tabs__column
+                h3.tabs__accent-heading Treatment
+                p
+                  b The choice of the optimal treatment dependents on findings.For the particular treatment process, recommendations would be given upon inspection for treatment.
+            .tabs__columns
+              .tabs__column
+                h4 It seems I have rodents at home…
+                p
+                  b Should you have noticed rodents or rodent activity, please don't hesitate to call Extreme Exterminating. Keep in mind left untreated you can have a more serious issue for health and damages to your property, which can cause significant financial hit.
+              .tabs__column
+                .tabs__cta-btn
+                  button.btn(data-micromodal-trigger="modal-1") contact now
+          //Rodent tab end
+          //Tabs content end
+
+          h2 commercial services
+          p
+            b Extreme Exterminating works with both private and commercial customers. We are ready to send the best specialists of pest control to your commercial premise, and you will forget about pests bothering you!
+          .tabs__columns.tabs__with-labels
+            .tabs__column
+              h4 You’re in the right time and in the right place, if your business suffers from
+              ul.tabs__labels
+                li
+                  span Cockroaches
+                li
+                  span Bed bugs
+                li
+                  span Ants
+                li
+                  span Rodents
+                li
+                  span Other pests
+              p
+                b Our company has been working in the area of pest control for many years, so we are sure of the quality.
+            .tabs__column
+              h4 We offer services to
+              ul.tabs__labels.tabs__labels_two-columns
+                li
+                  span Hotels
+                li
+                  span Gyms
+                li
+                  span Restaurants
+                li
+                  span Libraries
+                li
+                  span Hospitals
+                li
+                  span Auditoriums
+                li
+                  span Schools
+                li
+                  span And so on…
+          .tabs__columns.tabs__with-margins
+            .tabs__column
+              h4 Importance of pest control for business
+              p
+                b Business losses may be more expensive than the price of pest control services.
+              p
+                b 1. Businesses may suffer financial losses due to the damages of goods, property and  reputation
+              p
+                b 2. Customers may notice pests in your establishment leading to a decrease in demand. They will likely tell everyone that they have seen a pest in your place of business.
+            .tabs__column
+              h4 Why doesn’t do-it-yourself pest control work?
+              p
+                b First of all, it takes a lot of time, costs much, and might be ineffective. No repellent from a supermarket will guarantee you success.
+              p
+                b Unwanted guests, especially cockroaches, do not disappear when treated by chemicals  sold to general public.
+              p
+                b What’s more, you may exterminate pests in all visible places, but only  experienced member of Extreme Exterminating team of trained pest control professionals can help exterminate pests in the hard to reach areas which seem invisible to the untrained eye.
+  //Controls section end
+
+  //About section bgn
+  section.about.jsMenuTarget#about
+    .about__container
+      .about__info-block
+        .section-container
+          h2.about__heading About us
+          h4 We here at Extreme Exterminating are based in Brooklyn, New York. We will provide high-quality results in pest control in all Boroughs of NYC
+          .about__columns
+            .about__column
+              h4 Mission statement
+              p
+                b Our mission is to have your business and property prospering without unwanted pests.We carry out a whole complex of measures to protect property in the direction specified by the client. Also, we provide full information, consultation and support throughout the entire treatment period.
+            .about__column
+              h4 Staff
+              p
+                b Our employees at Extreme Exterminating have 25 years of pest control experience and continues to keep up with the latest methods in pest control. We employ highly skilled Pest Control professionals, whose skill allow them to design the best treatment protocol for your property.
+          .about__columns
+            .about__column
+              h4 Our Customers’ Feedback
+              p
+                b Your feedback is important to us, please feel free to leave any comments. We thank you for choosing Extreme Exterminating as your pest control company !
+            .about__column
+              .about__cta-btn
+                button.btn(data-micromodal-trigger="modal-1") contact now
+
+      .about__testimonials-block
+        .section-container
+          h4 And here’s what our happy customers sent us recently:
+          .about__testimonials.testimonials
+            ul.testimonials__list
+              li.testimonials__item
+                .testimonials__icon
+                  img(src="img/icon-user.svg" alt="User icon.")
+                .testimonials__content
+                  ul.testimonials__stars
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                  .testimonials__text
+                    p
+                      b “I’ve addressed two other services for exterminating cockroaches in my cafe, and only Extreme Exterminating helped get rid of them forever. More than a month has passed and our kitchens are absolutely pests free!”
+              li.testimonials__item
+                .testimonials__icon
+                  img(src="img/icon-user.svg" alt="User icon.")
+                .testimonials__content
+                  ul.testimonials__stars
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                  .testimonials__text
+                    p
+                      b Bed bugs appeared in our house, we tried to solve this issue on our own, but were unsuccessful . They disappeared for a couple of days, and then the nightmare began again. Thanks to Extreme Exterminating, we were able to regain our ability to sleep without bed bugs.
+              li.testimonials__item
+                .testimonials__icon
+                  img(src="img/icon-user.svg" alt="User icon.")
+                .testimonials__content
+                  ul.testimonials__stars
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                    li.testimonials__star
+                      img(src="img/icon-star_green.svg" alt="Rating star.")
+                  .testimonials__text
+                    p
+                      b I am responsible for the improvement of the office, which is located above the grocery store warehouse. Once mice got there, they began to make their way to our office, scare colleagues and customers. Together with the store, we ordered Extreme Exterminating services. The guys arrived on the same day, quickly coped with the work. Those mice haven’t shown up for more than a month. Great job!
+  //About section end
+
+block others
+  //- Micromodal body example
+  include parts/_micromodal-example

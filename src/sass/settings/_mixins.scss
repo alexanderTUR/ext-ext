@@ -1,0 +1,139 @@
+// CSS Lock
+// $min-size: minimum element $property size in $unit specified
+// $max-size: maximum element $property size in $unit specified
+// $min-width: the screen width in $units where you want to lock in the $min-size
+// $max-width: the screen width in $units where you want to lock in the $max-size
+// $property: the property of the element that you would like to scale/lock
+// $unit: the units which all measurements are taken in
+@mixin css-lock(
+  $min-size: 1,
+  $max-size: 1.4,
+  $min-width: 20,
+  $max-width: 100,
+  $property: font-size,
+  $unit: rem
+) {
+  #{$property}: calc(
+    #{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) /
+          (#{$max-width} - #{$min-width}))
+  );
+
+  @media (max-width: #{$min-width}#{$unit}) {
+    #{$property}: #{$min-size}#{$unit};
+  }
+
+  @media (min-width: #{$max-width}#{$unit}) {
+    #{$property}: #{$max-size}#{$unit};
+  }
+}
+
+// smooth font
+@mixin smooth-font {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// vertical-align at center
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// center
+@mixin center($axis) {
+  @if $axis == both {
+    @include vcenter;
+  } @else if $axis == h {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $axis == v {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// clearfix
+@mixin clr {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// transition
+@mixin transition($property: all, $duration: 0.2s, $easing: ease) {
+  transition: $property $duration $easing;
+}
+
+// images
+@mixin img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+// performance
+@mixin gpu {
+  transform: translate3d(0, 0, 0);
+}
+
+// ol>li counter
+@mixin counter($var, $sep) {
+  counter-reset: list + $var;
+  li:before {
+    content: counter(list + $var) $sep;
+    counter-increment: list + $var;
+  }
+}
+
+// reset buttons
+@mixin resetbutton($padding: 0) {
+  border: none;
+  margin: 0;
+  padding: $padding;
+  width: auto;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+}
+
+// reset first-child/last-child margins
+@mixin marginchildreset {
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// paddings for conatiners
+@mixin container-pad {
+  padding-left: 16px;
+  padding-right: 16px;
+  @include media('>=tabletSmall', '<tabletReg') {
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+}
+
+// limit width for containers
+@mixin container-lim($width: 1212px, $media: '>=tabletReg') {
+  @include media($media) {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

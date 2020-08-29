@@ -1,0 +1,35 @@
+// Advantage card styles bgn
+
+.advantage-card {
+  position: relative;
+  background: $color-satin-linen;
+  box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.08), 1px 1px 1px rgba(0, 0, 0, 0.04),
+    -8px -8px 24px rgba(255, 255, 255, 0.18), 8px 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 32px 16px 16px;
+  text-align: center;
+  min-height: 132px;
+  display: flex;
+  align-items: center;
+}
+
+.advantage-card__star-image {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  width: 70px;
+}
+
+.advantage-card__text {
+  width: 100%;
+  font-size: 20px;
+  @include media('>=tabletReg') {
+    font-size: 24px;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+// Advantage card styles end

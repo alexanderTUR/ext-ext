@@ -1,0 +1,90 @@
+---
+title: Extreme Exterminating
+bodyClass: template-main
+---
+extends layouts/_main-layout
+
+block content
+
+  //- variable usage example
+  h1= title
+
+  //- partial include example
+  include parts/_example
+
+  //- mixins usage examples
+  div
+
+    +spacer
+    +icon-mono('icon-telegram', 'Telegram icon')
+    +spacer
+    +icon-mono('icon-facebook', 'Facebook icon')
+    +spacer
+    +icon-multi('icon-js', 'JavaScript icon')
+    +spacer
+    +icon-multi('icon-star', 'JavaScript icon')
+
+  //- variable set example
+  - let list = ['text 1', 'text 2', 'text 3', 'text 4'];
+
+  //- loop usage example
+  ul
+    for item in list
+      li= item
+
+  //color function usage example (look in _start-examples.scss file for more info)
+  .color-function
+
+  //mix colors with transparency example (look in _start-examples.scss file for more info)
+  .color-with-transparency
+
+  //smooth linear-gradients example (look in _start-examples.scss file for more info)
+  .smooth-gradient
+
+  //create ouside border which do not affect the layout (look in _start-examples.scss file for more info)
+  .border-align-outside
+
+  //create inside border which do not affect the layout (look in _start-examples.scss file for more info)
+  .border-align-inside
+
+  //media queries usage example (look in _start-examples.scss file for more info)
+  .test-media
+
+  //critical CSS usage example (look in _index.scss file for more info)
+  .test-critical
+
+  //animation usage examples (look in _start-examples.scss file for more info)
+  .animation-test
+  .animation-magic-test
+
+  //CSS triangles examples (look in _start-examples.scss file for more info)
+  .isosceles-triangle
+  .right-isosceles-triangle
+  .equilateral-triangle
+
+  //aspect ration usage example (look in _start-examples.scss file for more info)
+  .aspect-ratio-16-9
+    img(src='img/test-image.jpg' alt='test image')
+
+  //css-lock usage example (look in _start-examples.scss file for more info)
+  p.css-lock Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt itaque nisi, nostrum obcaecati quae, quisquam, quo rerum similique ut voluptas voluptate. Aut delectus eaque eos fuga ipsum laboriosam numquam quo sunt. Ab, consequuntur culpa delectus ducimus molestiae praesentium quia repellat sequi. Corporis cum delectus deserunt doloribus est, et ex fuga illum ipsum minus necessitatibus nemo non pariatur, quisquam recusandae reprehenderit similique unde vel vero voluptatum.
+
+  //customize scrollbar with CSS only example (look in _start-examples.scss file for more info)
+  .scrollbar-example
+    p Tempor cupidatat laborum consectetur sit aliquip. Cillum cupidatat nisi aute occaecat. Lorem sunt sunt Lorem magna dolore magna cillum ad ullamco dolor. Fugiat Lorem sunt non esse duis elit deserunt nisi. Tempor cupidatat laborum consectetur sit aliquip. Cillum cupidatat nisi aute occaecat. Lorem sunt sunt Lorem magna dolore magna cillum ad ullamco dolor. Fugiat Lorem sunt non esse duis elit deserunt nisi. Tempor cupidatat laborum consectetur sit aliquip. Cillum cupidatat nisi aute occaecat. Lorem sunt sunt Lorem magna dolore magna cillum ad ullamco dolor. Fugiat Lorem sunt non esse duis elit deserunt nisi. Tempor cupidatat laborum consectetur sit aliquip. Cillum cupidatat nisi aute occaecat. Lorem sunt sunt Lorem magna dolore magna cillum ad ullamco dolor. Fugiat Lorem sunt non esse duis elit deserunt nisi. Tempor cupidatat laborum consectetur sit aliquip. Cillum cupidatat nisi aute occaecat. Lorem sunt sunt Lorem magna dolore magna cillum ad ullamco dolor. Fugiat Lorem sunt non esse duis elit deserunt nisi. Tempor cupidatat laborum consectetur sit aliquip. Cillum cupidatat nisi aute occaecat. Lorem sunt sunt Lorem magna dolore magna cillum ad ullamco dolor. Fugiat Lorem sunt non esse duis elit deserunt nisi.
+
+  //LostGrid usage example (look in _start-examples.scss file for more info)
+  .lost-example
+    .lost-example__wrapper
+      .lost-example__col
+        p THIS IS "LOST" COLUMN N1
+      .lost-example__col
+        p THIS IS "LOST" COLUMN N2
+      .lost-example__col
+        p THIS IS "LOST" COLUMN N3
+
+block others
+  //- Micromodal show button example
+  button(data-micromodal-trigger="modal-1") Show modal
+  //- Micromodal body example
+  include parts/_micromodal-example

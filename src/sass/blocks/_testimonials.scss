@@ -1,0 +1,57 @@
+// Testimonials styles bgn
+
+.testimonials {
+}
+
+.testimonials__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.testimonials__item {
+  background: $color-satin-linen;
+  box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.08), 1px 1px 1px rgba(0, 0, 0, 0.04),
+    -8px -8px 24px rgba(255, 255, 255, 0.18), 8px 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+}
+
+.testimonials__item + .testimonials__item {
+  margin-top: 24px;
+}
+
+.testimonials__icon {
+  width: 64px;
+  min-width: 64px;
+  margin-right: 8px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.testimonials__content {
+}
+
+.testimonials__stars {
+  list-style-type: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+}
+
+.testimonials__star {
+  width: 24px;
+  height: 24px;
+}
+
+.testimonials__text {
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+// Testimonials styles end

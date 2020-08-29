@@ -1,0 +1,50 @@
+// Settings
+@import 'settings/all';
+
+// Normalize CSS (through PostCSS-plugin)
+/* critical:start */
+@import-normalize;
+/* critical:end */
+
+// Sanitize CSS (through PostCSS-plugin)
+// @import-sanitize;
+
+//Fonts
+@import 'global/fonts';
+
+// Global base styles
+@import 'global/base';
+
+// Global typography styles
+@import 'global/typography';
+
+// Libs styles
+@import 'libs/all';
+
+// Icons styles
+//@import 'generated/sprite-mono-generated';
+//@import 'generated/sprite-multi-generated';
+
+// Elements styles
+@import 'elements/burger';
+@import 'elements/buttons';
+
+// Components styles
+@import 'components/advantage-card';
+@import 'components/pest';
+
+// Blocks styles
+@import 'blocks/testimonials';
+
+// Global page layout styles
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Page styles
+@import 'pages/index';
+
+// Examples styles (comment out before development)
+//@import 'global/start-examples';
+
+// Debug styles (comment out before production)
+@import 'settings/debug';

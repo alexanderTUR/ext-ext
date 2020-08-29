@@ -1,0 +1,29 @@
+header.page-header
+  .page-header__container
+    .page-header__wrapper
+      .page-header__logo
+        img(src="img/logo-extreme-exterminating.svg" alt="Extreme Exterminating Logo.")
+
+      //Burger button bgn
+      +spacer
+      button.page-header__burger.burger-button
+        span.burger-button__click-region
+          span.burger-button__line
+          span.burger-button__line
+          span.burger-button__line
+      //Burger button end
+
+      nav.page-header__navigation.main-navigation
+        ul.main-navigation__list
+          li.main-navigation__item
+            a.main-navigation__link.current(href="#hero" rel='scroll-to-id') home
+          li.main-navigation__item
+            a.main-navigation__link(href="#advantages" rel='scroll-to-id') Our advantages
+          li.main-navigation__item
+            a.main-navigation__link(href="#services" rel='scroll-to-id') Services
+          li.main-navigation__item
+            a.main-navigation__link(href="#controls" rel='scroll-to-id') Controls
+          li.main-navigation__item
+            a.main-navigation__link(href="#about" rel='scroll-to-id') About us
+          li.main-navigation__item
+            a.main-navigation__link(href="#footer" rel='scroll-to-id') contact us

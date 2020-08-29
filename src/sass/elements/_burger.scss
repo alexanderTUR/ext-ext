@@ -1,0 +1,121 @@
+/* critical:start */
+// Burger button styles bgn
+
+$menu-animation-duration: 200ms;
+$menu-animation-timing: ease-out;
+
+.burger-button {
+  position: relative;
+  width: 24px;
+  height: 18px;
+  color: $color-green;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.burger-button__click-region {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.burger-button__line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid $color-green;
+  transform-origin: 50% 50%;
+  transition: transform $menu-animation-duration $menu-animation-timing;
+  &:nth-child(1) {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 7px;
+    opacity: 1;
+    transition: transform $menu-animation-duration $menu-animation-timing,
+      opacity 0ms linear $menu-animation-duration / 2;
+  }
+  &:nth-child(3) {
+    top: 14px;
+  }
+}
+
+.burger-button_active {
+  .burger-button__line {
+    &:nth-child(1) {
+      animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      transition: transform $menu-animation-duration $menu-animation-timing,
+        opacity 0ms linear $menu-animation-duration / 2;
+    }
+    &:nth-child(3) {
+      animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+}
+
+.burger-button_closing {
+  .burger-button__line {
+    &:nth-child(1) {
+      animation: burger-close-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+    &:nth-child(3) {
+      animation: burger-close-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+}
+
+@keyframes burger-open-top {
+  50% {
+    transform: translate3d(0, 7px, 0);
+  }
+  100% {
+    transform: translate3d(0, 7px, 0) rotate(45deg);
+  }
+}
+
+@keyframes burger-open-bot {
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+  100% {
+    transform: translate3d(0, -7px, 0) rotate(-45deg);
+  }
+}
+
+@keyframes burger-close-top {
+  0% {
+    transform: translate3d(0, 7px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 7px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes burger-close-bot {
+  0% {
+    transform: translate3d(0, -7px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Burger button styles end
+/* critical:end */

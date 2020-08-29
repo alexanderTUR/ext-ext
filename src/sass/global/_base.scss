@@ -1,0 +1,127 @@
+/* critical:start */
+// Base styles
+// Box-sizing defaults
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: $color-default-text;
+  background-color: $color-default-bg;
+  font-family: 'Roboto', Helvetica, Verdana, sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// A better looking default links decoration
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+// Remove text-shadow in selection highlight. Customize the background color to match your design.
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+// A better looking default horizontal rule
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+// Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+// Inherit font for inputs
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Remove default fieldset styles.
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+
+// Reset all CSS animation for user, who prefer less animation in browsers
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Some helper classes
+// Old IE message block
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// Hide visually and from screen readers
+.hidden {
+  display: none !important;
+}
+
+// Hide only visually, but have it available for screen readers
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+// Hide visually and from screen readers, but maintain layout
+.invisible {
+  visibility: hidden;
+}
+/* critical:end */

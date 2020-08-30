@@ -26,8 +26,8 @@ gulp.task('js:bundle', () =>
       //  - SVG-sprites fallback for IE (include, if you use SVG-sprites)
       // `${config.nodeModules}/svg4everybody/dist/svg4everybody.js`,
       //  - Object.assign and Array.from polyfills for IE (needed for Micro Modal plugin)
-      `${config.src.jsPolyfills}/Object.assign.js`,
-      `${config.src.jsPolyfills}/Array.from.js`,
+      // `${config.src.jsPolyfills}/Object.assign.js`,
+      // `${config.src.jsPolyfills}/Array.from.js`,
       //  - Micromodal plugin (lightweight modal - https://micromodal.now.sh/)
       `${config.nodeModules}/micromodal/dist/micromodal.js`,
       //  - Slick slider (best carousel - https://kenwheeler.github.io/slick/)

@@ -18,7 +18,7 @@ function setViewportProperty(doc) {
 window.addEventListener('resize', setViewportProperty(document.documentElement));
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  // Micromodal init
+  // Micromodal plugin init
   MicroModal.init({
     disableScroll: false,
     awaitOpenAnimation: true,
@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
     if (elementExists && elementExists.getBoundingClientRect) {
       const rect = elementExists.getBoundingClientRect();
       const elementTop = rect.top + window.scrollY - offset;
-      var cosParameter = (window.scrollY - elementTop) / 2,
-        scrollCount = 0,
-        oldTimestamp = performance.now();
+      const cosParameter = (window.scrollY - elementTop) / 2;
+      let scrollCount = 0;
+      let oldTimestamp = performance.now();
       function step(newTimestamp) {
         scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
         if (scrollCount >= Math.PI) {
@@ -99,10 +99,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
   }
 
-  // simple function to use for callback in the intersection observer
+  // Highlight menu links with intersection observer
   const changeNav = (entries, observer) => {
     entries.forEach((entry) => {
-      // console.log('entry', entry);
       // verify the element is intersecting
       if (entry.isIntersecting && entry.intersectionRatio) {
         // remove old active class
@@ -115,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
   };
 
+  // calc threshold function
   const calcThreshold = () => {
     if (window.innerWidth > 1280) {
       return 0.4;
@@ -122,12 +122,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
       return 0.3;
     } else return 0.1;
   };
+
   // init the observer
   const options = {
     threshold: calcThreshold(),
   };
-
-  console.log(options);
 
   const observer = new IntersectionObserver(changeNav, options);
 

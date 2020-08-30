@@ -80,8 +80,5 @@
     "sort-css-media-queries": "^1.5.0",
     "svg4everybody": "^2.1.9"
   },
-  "browserslist": "last 2 version, not dead, > 1%, not OperaMini all, not OperaMobile > 0, not FirefoxAndroid > 0, not Android > 0, not Baidu > 0, not QQAndroid > 0, not UCAndroid > 0, not ExplorerMobile > 0, not kaios > 0",
-  "dependencies": {
-    "npm-check-updates": "^7.1.1"
-  }
+  "browserslist": ["last 2 version", "not dead", "> 1%", "not OperaMini all", "not OperaMobile > 0", "not FirefoxAndroid > 0", "not Android > 0", "not Baidu > 0", "not QQAndroid > 0", "not UCAndroid > 0", "not ExplorerMobile > 0", "not kaios > 0", "not IE 11", "not IE_Mob 11"]
 }

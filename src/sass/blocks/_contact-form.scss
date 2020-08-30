@@ -1,0 +1,50 @@
+//Contact form styles bgn
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 324px;
+  margin-left: auto;
+  margin-right: auto;
+  input {
+    margin-bottom: 24px;
+    @include marginchildreset;
+  }
+  textarea {
+    margin-bottom: 24px;
+  }
+}
+
+.contact-form__input {
+  background: $color-default-bg;
+  border-radius: 32px;
+  appearance: none;
+  padding: 10px 24px;
+  border: 2px solid transparent;
+  outline: none;
+  @include transition(border);
+  &:enter {
+    border-color: $color-go-ben;
+  }
+}
+
+.contact-form__textarea {
+  background: $color-default-bg;
+  border-radius: 16px;
+  appearance: none;
+  padding: 10px 24px;
+  border: 2px solid transparent;
+  outline: none;
+  @include transition(border);
+  &:enter {
+    border-color: $color-go-ben;
+  }
+}
+
+.contact-form__submit {
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Contact form styles end

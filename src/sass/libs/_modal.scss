@@ -3,8 +3,6 @@
 \**************************/
 
 .modal {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica,
-    ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
 
 .modal__overlay {
@@ -13,7 +11,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 1000;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
@@ -21,34 +19,48 @@
 }
 
 .modal__container {
-  background-color: #fff;
-  padding: 30px;
-  max-width: 500px;
-  max-height: 100vh;
-  border-radius: 4px;
+  padding: 30px 24px 24px;
+  width: 100%;
+  max-width: 672px;
+  max-height: 90vh;
   overflow-y: auto;
-  box-sizing: border-box;
+  background: $color-satin-linen;
+  border-radius: 16px;
+  position: relative;
 }
 
 .modal__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .modal__title {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
-  color: #00449e;
-  box-sizing: border-box;
+  font-size: 26px;
+  text-align: center;
+  color: $color-black;
+  @include media('>=tabletSmall') {
+    font-size: 36px;
+  }
 }
 
 .modal__close {
   background: transparent;
   border: 0;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  appearance: none;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0 3px;
+  @include media('>=tabletSmall') {
+    top: 37px;
+    right: 48px;
+  }
 }
 
 .modal__header .modal__close:before {
@@ -56,43 +68,6 @@
 }
 
 .modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.modal__btn {
-  font-size: 0.875rem;
-  padding: 0.5rem 1rem;
-  background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  border-radius: 0.25rem;
-  border-style: none;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-appearance: button;
-  text-transform: none;
-  overflow: visible;
-  line-height: 1.15;
-  margin: 0;
-  will-change: transform;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-
-  &:focus,
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
-.modal__btn-primary {
-  background-color: #00449e;
-  color: #fff;
 }
 
 /**************************\

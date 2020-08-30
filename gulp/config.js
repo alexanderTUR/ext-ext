@@ -11,8 +11,8 @@ const destPath = 'build';
 const config = {
   env: 'development',
   production: production,
-  revision: false, // set to true if CSS and JS files revision needed
-  minifyHtml: false, // set to true if HTML minification needed
+  revision: true, // set to true if CSS and JS files revision needed
+  minifyHtml: true, // set to true if HTML minification needed
   revManifest: 'rev-manifest.json',
   nodeModules: 'node_modules',
 

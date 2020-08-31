@@ -90,6 +90,7 @@
     background-color: transparent;
     padding: 0;
     pointer-events: auto;
+    margin-bottom: 64px;
   }
   &_opened {
     height: 100%;
@@ -137,6 +138,31 @@
   &:enter,
   &.current {
     color: $color-green;
+  }
+}
+
+.page-header__promo {
+  display: none;
+  @include media('>=tabletReg') {
+    display: block;
+  }
+}
+
+.page-header__promo-block + .page-header__promo-block {
+  margin-top: 64px;
+}
+
+.page-header__promo-number {
+  font-size: 36px;
+  color: $color-turbo;
+  font-family: 'MADE Soulmaze', Helvetica, Verdana, sans-serif;
+}
+
+.page-header__promo-text {
+  font-size: 14px;
+  color: $color-white;
+  p {
+    margin: 0;
   }
 }
 

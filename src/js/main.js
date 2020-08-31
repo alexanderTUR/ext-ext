@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       return 0.4;
     } else if (window.innerWidth >= 1024 && window.innerWidth <= 1280) {
       return 0.3;
-    } else return 0.15;
+    } else return 0.2;
   };
 
   // init the observer

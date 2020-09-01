@@ -2,9 +2,7 @@
 @import 'settings/all';
 
 // Normalize CSS (through PostCSS-plugin)
-/* critical:start */
 @import-normalize;
-/* critical:end */
 
 // Sanitize CSS (through PostCSS-plugin)
 // @import-sanitize;
@@ -48,4 +46,4 @@
 //@import 'global/start-examples';
 
 // Debug styles (comment out before production)
-@import 'settings/debug';
+//@import 'settings/debug';

@@ -531,12 +531,15 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-family: 'MADE Soulmaze', Helvetica, Verdana, sans-serif;
   color: $color-white;
   outline: none;
   @include transition(color);
+  @include media('>=phoneReg') {
+    font-size: 14px;
+  }
   &_active,
   &:enter {
     color: $color-green;

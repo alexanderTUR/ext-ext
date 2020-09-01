@@ -31,6 +31,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* critical:end */
 
 // A better looking default links decoration
 a:not([class]) {
@@ -102,6 +103,7 @@ textarea {
   padding: 0.2em 0;
 }
 
+/* critical:start */
 // Hide visually and from screen readers
 .hidden {
   display: none !important;

@@ -7,10 +7,10 @@
           | Contact now
         button.modal__close(aria-label="Close modal" data-micromodal-close)
       #contact-form-content.modal__content
-        form.contact-form
-          input.contact-form__input(type="text" placeholder="name" maxlength="40" required)
-          input.contact-form__input(type="text" placeholder="phone number" maxlength="20" required)
-          input.contact-form__input(type="email" placeholder="email" maxlength="40")
-          textarea.contact-form__textarea(placeholder="message" maxlength="200")
+        form.contact-form(action="https://formspree.io/mzbjnjer" method="POST")
+          input.contact-form__input(type="text" placeholder="name" maxlength="40" name="Name" required)
+          input.contact-form__input(type="text" placeholder="phone number" maxlength="20" name="Phone" required)
+          input.contact-form__input(type="email" placeholder="email" maxlength="40" name="Email")
+          textarea.contact-form__textarea(placeholder="message" maxlength="200" name="Message")
           input.btn.contact-form__submit(type="submit" value="Send")
 //Modal end

@@ -51,7 +51,8 @@
     @include media('>=tabletReg') {
       font-size: 24px;
       margin-bottom: 0;
-      min-width: 200px;
+      min-width: 120px;
+      margin-right: 32px;
     }
   }
   a {
@@ -59,9 +60,10 @@
     color: $color-white;
     font-family: 'MADE Soulmaze', Helvetica, Verdana, sans-serif;
     text-decoration: none;
+    word-break: break-all;
     @include transition(color);
     @include media('>=tabletReg') {
-      font-size: 24px;
+      font-size: 20px;
     }
     &:enter {
       text-decoration: underline;
@@ -77,6 +79,12 @@
   flex-direction: column;
   @include media('>=tabletReg') {
     flex-direction: row;
+    align-items: baseline;
+  }
+  a + a {
+    @include media('>=tabletReg') {
+      margin-left: 32px;
+    }
   }
 }
 
@@ -87,6 +95,7 @@
   flex-direction: column;
   @include media('>=tabletReg') {
     flex-direction: row;
+    align-items: baseline;
   }
 }
 
